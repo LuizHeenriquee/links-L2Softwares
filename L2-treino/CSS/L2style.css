@@ -24,6 +24,7 @@
     --switch-background-url: url(/L2-treino/assets/moon-stars.svg);
     --button-background-color: var(--timberwolf);
     --button-border-color: var(--black);
+    --highlight-color: grey;
 }
 
 .light {
@@ -92,11 +93,11 @@ body {
     z-index: 1;
     top: 50%;
     transform: translateY(-50%);
+    animation: slide-out 0.3s forwards;
 }
 
 .light #switch button {
-    right: 0;
-    left: initial; /* Volta para a maneira inicial */
+    animation: slide-in 0.3s forwards;
 }
 
 #switch span {
@@ -166,5 +167,26 @@ p {
 
     .light {
         --background-color: linear-gradient(to right, var(--blue), var(--timberwolf));
+    }
+}
+
+/* Animation */
+@keyframes slide-in {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: 50%;
+    }
+}
+
+@keyframes slide-out {
+    from {
+        left: 50%;
+    }
+
+    to {
+        left: 0;
     }
 }
