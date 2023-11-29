@@ -46,6 +46,7 @@ body * {
 
 body {
     background-image: var(--background-color);
+    height: 100vh;
 }
 
 #container {
@@ -155,4 +156,15 @@ p {
     background: var(--background-color-hover);
     color: var(--text-color-link-hover);
     box-shadow: 10px 5px 4px var(--box-shadow-color);
+}
+
+/* Media Queries */
+@media (min-width: 700px) { /* De 700px pra cima, vai adicionar as regras dentro das chaves */
+    :root {
+        --background-color: linear-gradient(to right, var(--blue), var(--black));
+    }
+
+    .light {
+        --background-color: linear-gradient(to right, var(--blue), var(--timberwolf));
+    }
 }
